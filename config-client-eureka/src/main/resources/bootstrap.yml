@@ -1,0 +1,35 @@
+#spring.application.name=didispace
+#server.port=7002
+#
+#eureka.client.serviceUrl.defaultZone=http://localhost:1111/eureka/
+#
+#spring.cloud.config.discovery.enabled=true
+#spring.cloud.config.discovery.serviceId=config-server
+#spring.cloud.config.profile=dev
+
+spring:
+  application:
+    name: application
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server-eureka
+      profile: dev
+      label: master
+
+server:
+  port: 7002
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
+
+#1.5.x版本后需要在配置中手动开启actuator的refresh
+#并且刷新的路径更改为 /actuator/refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

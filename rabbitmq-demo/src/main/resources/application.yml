@@ -1,0 +1,14 @@
+#spring.application.name=rabbitmq-hello
+#
+#spring.rabbitmq.host=localhost
+#spring.rabbitmq.port=5672
+#spring.rabbitmq.username=spring
+#spring.rabbitmq.password=123456
+spring:
+  application:
+    name: rabbitmp-demo
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

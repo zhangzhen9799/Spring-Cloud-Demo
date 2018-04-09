@@ -1,0 +1,30 @@
+#spring.application.name=config-server
+#server.port=7001
+## 配置服务注册中心
+#eureka.client.serviceUrl.defaultZone=http://localhost:1111/eureka/
+## git仓库配置
+#spring.cloud.config.server.git.uri=http://git.oschina.net/didispace/SpringCloud-Learning/
+#spring.cloud.config.server.git.searchPaths=Chapter1-1-8/config-repo
+#spring.cloud.config.server.git.username=username
+#spring.cloud.config.server.git.password=password
+
+spring:
+  application:
+    name: config-server-eureka
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/zhangzhen9799/config-repo
+          search-paths: config-repo
+          default-label: master
+#          username: zhangzhen9799
+#          password: 1997.09.09.
+
+server:
+  port: 7001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
